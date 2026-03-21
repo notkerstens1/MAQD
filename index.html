@@ -7,30 +7,39 @@
   <meta name="description" content="Sistema de geração de demanda para empresas de energia solar. Funil montado, campanhas prontas, sem mensalidade.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <!-- Meta Pixel — substituir pelo código real -->
   <!-- <script>...</script> -->
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <div class="container nav__inner">
-      <a href="#" class="nav__logo">RAPP<span class="orange">O</span>RT</a>
-      <a href="#formulario" class="btn btn--primary nav__cta">Quero minha máquina de demanda</a>
+  <!-- LOGO (top of page, no traditional navbar) -->
+  <div class="container">
+    <div class="page-logo">
+      <span class="page-logo__icon">✦</span>
+      <div class="page-logo__text">
+        <small>máquina de demanda</small>
+        <strong>RAPPORT</strong>
+      </div>
     </div>
-  </nav>
+  </div>
 
   <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero__glow"></div>
+    <div class="hero__glow-left"></div>
     <div class="container">
       <div class="hero__content">
         <span class="badge fade-in-up">☀ Exclusivo para empresas de energia solar</span>
-        <h1 class="fade-in-up">Sua empresa solar vendendo com previsibilidade — usando o sistema que já gerou mais de R$1&nbsp;milhão em uma única operação.</h1>
+        <h1 class="fade-in-up">Sua empresa solar vendendo com previsibilidade — usando o <span class="orange">sistema que já gerou mais de R$1&nbsp;milhão</span> em uma única operação.</h1>
         <p class="hero__subtitle fade-in-up">Você sai com funil montado, campanhas prontas e o sistema de geração de demanda rodando. Paga uma vez. Opera sozinho.</p>
-        <a href="#formulario" class="btn btn--primary fade-in-up">Quero montar minha máquina de demanda →</a>
+        <a href="#formulario" class="btn btn--primary fade-in-up">
+          Quero montar minha máquina de demanda
+          <span class="btn__icon">
+            <svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+          </span>
+        </a>
       </div>
       <div class="hero__proof fade-in-up">
         <div class="hero__proof-item">
@@ -49,11 +58,34 @@
     </div>
   </section>
 
+  <!-- TICKER / MARQUEE -->
+  <div class="ticker">
+    <div class="ticker__track">
+      <span class="ticker__item">Sistema testado em +8 empresas solares</span>
+      <span class="ticker__item">R$1M faturado em 6 meses</span>
+      <span class="ticker__item">Sem mensalidade</span>
+      <span class="ticker__item">Funil montado + campanhas prontas</span>
+      <span class="ticker__item">Premiados pela Sol Fácil</span>
+      <span class="ticker__item">Pagamento único de R$2.500</span>
+      <span class="ticker__item">Implementação + treinamento incluso</span>
+      <span class="ticker__item">Exclusivo para energia solar</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="ticker__item">Sistema testado em +8 empresas solares</span>
+      <span class="ticker__item">R$1M faturado em 6 meses</span>
+      <span class="ticker__item">Sem mensalidade</span>
+      <span class="ticker__item">Funil montado + campanhas prontas</span>
+      <span class="ticker__item">Premiados pela Sol Fácil</span>
+      <span class="ticker__item">Pagamento único de R$2.500</span>
+      <span class="ticker__item">Implementação + treinamento incluso</span>
+      <span class="ticker__item">Exclusivo para energia solar</span>
+    </div>
+  </div>
+
   <!-- CREDIBILIDADE -->
   <section class="section" id="credibilidade">
     <div class="container">
       <span class="section__label fade-in-up">Resultados reais</span>
-      <h2 class="fade-in-up">Não é teoria. É sistema testado em mais de 8 empresas solares.</h2>
+      <h2 class="fade-in-up">Não é teoria. É <span class="orange">sistema testado</span> em mais de 8 empresas solares.</h2>
       <p class="section__desc fade-in-up">Todas com resultados fora da média de mercado — usando prospecção via tráfego pago, qualificação de lead e venda pelo WhatsApp.</p>
       <div class="cards-grid fade-in-up">
         <div class="card">
@@ -76,10 +108,10 @@
   </section>
 
   <!-- HISTÓRIA -->
-  <section class="section" id="historia">
+  <section class="section section--alt" id="historia">
     <div class="container">
       <span class="section__label fade-in-up">Quem somos</span>
-      <h2 class="fade-in-up">Não somos agência que faz tráfego pra solar. Somos operadores que já venderam solar.</h2>
+      <h2 class="fade-in-up">Não somos agência que faz tráfego pra solar. Somos <span class="orange">operadores que já venderam solar.</span></h2>
       <div class="story__content fade-in-up">
         <p>A Rapport foi sócia de uma operação de energia solar que escalou do zero a mais de R$1 milhão em faturamento em 6 meses. Não como prestador de serviço. Como sócio. Com dinheiro próprio na mesa.</p>
         <p>Construímos o sistema de geração de demanda completo: posicionamento, conteúdo, campanhas, qualificação, CRM e processo comercial. Tudo conectado. Tudo medido por etapa.</p>
@@ -95,7 +127,7 @@
   <section class="section" id="entregaveis">
     <div class="container">
       <span class="section__label fade-in-up">O que você recebe</span>
-      <h2 class="fade-in-up">Tudo que sua empresa precisa pra gerar demanda com previsibilidade.</h2>
+      <h2 class="fade-in-up">Tudo que sua empresa precisa pra <span class="orange">gerar demanda com previsibilidade.</span></h2>
       <p class="section__desc fade-in-up">Paga uma vez, sai com o sistema rodando e opera sozinho.</p>
       <div class="deliverables-grid fade-in-up">
         <div class="card card--deliverable">
@@ -136,7 +168,7 @@
   <section class="section section--pricing" id="preco">
     <div class="container">
       <span class="section__label fade-in-up">Investimento</span>
-      <h2 class="fade-in-up">Uma vez. Sistema rodando. Sem mensalidade.</h2>
+      <h2 class="fade-in-up">Uma vez. Sistema rodando. <span class="orange">Sem mensalidade.</span></h2>
       <div class="pricing-card fade-in-up">
         <div class="pricing-card__price">R$ 2.500</div>
         <div class="pricing-card__subtitle">Pagamento único</div>
@@ -149,7 +181,12 @@
           <li><span class="check">✓</span> Estratégia de conteúdo direcionada</li>
           <li><span class="check">✓</span> Implementação + treinamento pra operar sozinho</li>
         </ul>
-        <a href="#formulario" class="btn btn--primary btn--full">Quero montar minha máquina de demanda</a>
+        <a href="#formulario" class="btn btn--primary btn--full">
+          Quero montar minha máquina de demanda
+          <span class="btn__icon">
+            <svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+          </span>
+        </a>
       </div>
     </div>
   </section>
@@ -158,7 +195,7 @@
   <section class="section" id="formulario">
     <div class="container">
       <span class="section__label fade-in-up">Qualificação</span>
-      <h2 class="fade-in-up">Responda algumas perguntas pra gente entender se faz sentido pra sua empresa.</h2>
+      <h2 class="fade-in-up">Responda algumas perguntas pra gente entender se <span class="orange">faz sentido</span> pra sua empresa.</h2>
       <p class="section__desc fade-in-up">Leva menos de 2 minutos. Se sua empresa se encaixar, a gente entra em contato pra agendar.</p>
 
       <div class="form-wrapper fade-in-up" id="formWrapper">
@@ -280,7 +317,7 @@
           <form id="contactForm" novalidate>
             <div class="form-field">
               <label for="nome">Nome completo *</label>
-              <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+              <input type="text" id="nome" name="nome" required placeholder="Digite seu Nome Completo">
             </div>
             <div class="form-field">
               <label for="empresa">Nome da empresa</label>
@@ -294,7 +331,12 @@
               <label for="cidade">Cidade / Estado</label>
               <input type="text" id="cidade" name="cidade" placeholder="Natal / RN">
             </div>
-            <button type="submit" class="btn btn--primary btn--full">Enviar e garantir minha vaga</button>
+            <button type="submit" class="btn btn--primary btn--full">
+              Enviar e garantir minha vaga
+              <span class="btn__icon">
+                <svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+              </span>
+            </button>
           </form>
         </div>
 
@@ -310,17 +352,22 @@
         <div class="form-step form-result" data-step="rejected" style="display:none;">
           <h3 class="form-result__title">Essa consultoria é exclusiva pra empresas de energia solar.</h3>
           <p class="form-result__text">Se você atua em outro segmento e quer estruturar processo comercial e geração de demanda, conheça a mentoria da Rapport. É o mesmo método, adaptado pro seu mercado.</p>
-          <a href="https://wa.me/5584999999999" target="_blank" rel="noopener" class="btn btn--primary btn--full">Quero saber sobre a mentoria</a>
+          <a href="https://wa.me/5584999999999" target="_blank" rel="noopener" class="btn btn--primary btn--full">
+            Quero saber sobre a mentoria
+            <span class="btn__icon">
+              <svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+            </span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section" id="faq">
+  <section class="section section--alt" id="faq">
     <div class="container">
       <span class="section__label fade-in-up">Dúvidas frequentes</span>
-      <h2 class="fade-in-up">Antes de decidir.</h2>
+      <h2 class="fade-in-up">Antes de <span class="orange">decidir.</span></h2>
       <div class="faq-list fade-in-up">
         <details class="faq-item">
           <summary class="faq-item__question">Eu nunca fiz tráfego pago. Funciona pra mim?</summary>
@@ -368,6 +415,22 @@
       <p>Rapport &copy; 2026 &middot; @rapport &middot; Natal/RN</p>
     </div>
   </footer>
+
+  <!-- STICKY CTA (floating bottom-right) -->
+  <div class="sticky-cta sticky-cta--hidden" id="stickyCta">
+    <a href="#formulario" class="btn btn--primary">
+      Quero minha máquina de demanda
+      <span class="btn__icon">
+        <svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
+      </span>
+    </a>
+    <div class="progress-wrapper">
+      <div class="progress-bar">
+        <div class="progress-bar__fill"></div>
+      </div>
+      <p class="progress-label">Vagas limitadas — consultoria exclusiva</p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

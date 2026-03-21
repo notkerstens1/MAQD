@@ -1,6 +1,6 @@
 /* ========================================
    RAPPORT — Máquina de Demanda Solar
-   Form Logic & Interactions
+   Form Logic, Interactions & Sticky CTA
    ======================================== */
 
 (function () {
@@ -9,9 +9,8 @@
   // --- Fade-in-up on scroll ---
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry, index) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Stagger animation for sibling elements
           const siblings = entry.target.parentElement.querySelectorAll('.fade-in-up');
           const idx = Array.from(siblings).indexOf(entry.target);
           setTimeout(() => {
@@ -27,6 +26,26 @@
   document.querySelectorAll('.fade-in-up').forEach((el) => {
     observer.observe(el);
   });
+
+  // --- Sticky CTA (show after scrolling past hero) ---
+  const stickyCta = document.getElementById('stickyCta');
+  const heroSection = document.getElementById('hero');
+
+  if (stickyCta && heroSection) {
+    const stickyObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            stickyCta.classList.add('sticky-cta--hidden');
+          } else {
+            stickyCta.classList.remove('sticky-cta--hidden');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    stickyObserver.observe(heroSection);
+  }
 
   // --- Multi-step Form Logic ---
   const formWrapper = document.getElementById('formWrapper');
@@ -47,7 +66,6 @@
     const target = formWrapper.querySelector(`[data-step="${stepId}"]`);
     if (target) {
       target.style.display = 'block';
-      // Slight delay for transition
       requestAnimationFrame(() => {
         target.classList.add('active');
       });
@@ -66,7 +84,6 @@
         }
       });
     } else {
-      // Hide progress for result screens
       progressBar.style.display = 'none';
     }
   }
@@ -83,7 +100,6 @@
     const stepEl = e.target.closest('.form-step');
     const step = parseInt(stepEl.dataset.step);
 
-    // Store answer
     formData[e.target.name] = e.target.value;
 
     // Step 1: rejection path
@@ -92,7 +108,7 @@
       return;
     }
 
-    // Advance to next step after short delay
+    // Advance to next step
     if (step >= 1 && step <= 4) {
       setTimeout(() => goToStep(step + 1), 400);
     }
@@ -104,7 +120,6 @@
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      // Validate required fields
       const nome = document.getElementById('nome');
       const whatsapp = document.getElementById('whatsapp');
       let valid = true;
@@ -119,22 +134,17 @@
 
       if (!valid) return;
 
-      // Collect form data
       formData.nome = nome.value.trim();
       formData.empresa = document.getElementById('empresa').value.trim();
       formData.whatsapp = whatsapp.value.trim();
       formData.cidade = document.getElementById('cidade').value.trim();
 
-      // Send to Google Sheets webhook
       sendToGoogleSheets(formData);
-
-      // Show approved screen
       goToStep('approved');
     });
   }
 
   // --- Google Sheets Integration ---
-  // TODO: Replace with actual Google Sheets Apps Script webhook URL
   const WEBHOOK_URL = '';
 
   function sendToGoogleSheets(data) {
