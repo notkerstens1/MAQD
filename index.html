@@ -4,24 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rapport — Máquina de Demanda Solar</title>
-  <meta name="description" content="Sistema de geração de demanda para empresas de energia solar. Funil montado, campanhas prontas, sem mensalidade.">
+  <meta name="description" content="Sistema de geração de demanda para empresas de energia solar. Mais de R$4M gerados. Funil montado, campanhas prontas, agentes IA inclusos.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <!-- Meta Pixel — substituir pelo código real -->
-  <!-- <script>...</script> -->
 </head>
 <body>
 
-  <!-- LOGO (top of page, no traditional navbar) -->
-  <div class="container">
-    <div class="page-logo">
-      <span class="page-logo__icon">✦</span>
-      <div class="page-logo__text">
-        <small>máquina de demanda</small>
-        <strong>RAPPORT</strong>
-      </div>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#" class="nav__logo">RAPP<span class="orange">O</span>RT</a>
+      <a href="#formulario" class="btn btn--primary btn--sm">Quero minha vaga</a>
+    </div>
+  </nav>
+
+  <!-- BARRA DE VAGAS -->
+  <div class="vagas-bar" id="vagasBar">
+    <div class="container vagas-bar__inner">
+      <span class="vagas-bar__dot"></span>
+      <span>Restam <strong>5 vagas</strong> para março de 2026</span>
     </div>
   </div>
 
@@ -31,24 +34,22 @@
     <div class="hero__glow-left"></div>
     <div class="container">
       <div class="hero__content">
-        <span class="badge fade-in-up">☀ Exclusivo para empresas de energia solar</span>
-        <h1 class="fade-in-up">Sua empresa solar vendendo com previsibilidade — usando o <span class="orange">sistema que já gerou mais de R$1&nbsp;milhão</span> em uma única operação.</h1>
-        <p class="hero__subtitle fade-in-up">Você sai com funil montado, campanhas prontas e o sistema de geração de demanda rodando. Paga uma vez. Opera sozinho.</p>
+        <span class="badge fade-in-up">Exclusivo para empresas de energia solar</span>
+        <h1 class="fade-in-up">O sistema que já gerou mais de <span class="orange">R$&nbsp;4&nbsp;milhões</span> em vendas solares — montado e rodando na sua empresa.</h1>
+        <p class="hero__subtitle fade-in-up">Funil montado, campanhas prontas, 2 agentes de IA inclusos e treinamento completo. Paga uma vez. Opera sozinho. Sem mensalidade.</p>
         <a href="#formulario" class="btn btn--primary fade-in-up">
           Quero montar minha máquina de demanda
-          <span class="btn__icon">
-            <svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </span>
+          <span class="btn__icon"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span>
         </a>
       </div>
       <div class="hero__proof fade-in-up">
         <div class="hero__proof-item">
-          <strong>R$1M+</strong>
-          <span>faturados em 6 meses com uma única operação solar</span>
+          <strong>R$4M+</strong>
+          <span>gerados em vendas solares com o sistema</span>
         </div>
         <div class="hero__proof-item">
           <strong>8+ empresas</strong>
-          <span>de energia solar atendidas com resultados acima da média</span>
+          <span>solares atendidas com resultados acima da média</span>
         </div>
         <div class="hero__proof-item">
           <strong>Premiados</strong>
@@ -58,67 +59,123 @@
     </div>
   </section>
 
-  <!-- TICKER / MARQUEE -->
-  <div class="ticker">
-    <div class="ticker__track">
-      <span class="ticker__item">Sistema testado em +8 empresas solares</span>
-      <span class="ticker__item">R$1M faturado em 6 meses</span>
-      <span class="ticker__item">Sem mensalidade</span>
-      <span class="ticker__item">Funil montado + campanhas prontas</span>
-      <span class="ticker__item">Premiados pela Sol Fácil</span>
-      <span class="ticker__item">Pagamento único de R$2.500</span>
-      <span class="ticker__item">Implementação + treinamento incluso</span>
-      <span class="ticker__item">Exclusivo para energia solar</span>
-      <!-- Duplicate for seamless loop -->
-      <span class="ticker__item">Sistema testado em +8 empresas solares</span>
-      <span class="ticker__item">R$1M faturado em 6 meses</span>
-      <span class="ticker__item">Sem mensalidade</span>
-      <span class="ticker__item">Funil montado + campanhas prontas</span>
-      <span class="ticker__item">Premiados pela Sol Fácil</span>
-      <span class="ticker__item">Pagamento único de R$2.500</span>
-      <span class="ticker__item">Implementação + treinamento incluso</span>
-      <span class="ticker__item">Exclusivo para energia solar</span>
+  <!-- FAIXA DE PRINTS -->
+  <section class="prints-strip">
+    <div class="prints-strip__track" id="printsTrack">
+      <div class="prints-strip__item"><div class="prints-strip__placeholder">Print 1</div></div>
+      <div class="prints-strip__item"><div class="prints-strip__placeholder">Print 2</div></div>
+      <div class="prints-strip__item"><div class="prints-strip__placeholder">Print 3</div></div>
+      <div class="prints-strip__item"><div class="prints-strip__placeholder">Print 4</div></div>
+      <div class="prints-strip__item"><div class="prints-strip__placeholder">Print 5</div></div>
+      <div class="prints-strip__item"><div class="prints-strip__placeholder">Print 6</div></div>
+      <div class="prints-strip__item"><div class="prints-strip__placeholder">Print 7</div></div>
+      <div class="prints-strip__item"><div class="prints-strip__placeholder">Print 8</div></div>
     </div>
-  </div>
+  </section>
 
   <!-- CREDIBILIDADE -->
   <section class="section" id="credibilidade">
     <div class="container">
       <span class="section__label fade-in-up">Resultados reais</span>
-      <h2 class="fade-in-up">Não é teoria. É <span class="orange">sistema testado</span> em mais de 8 empresas solares.</h2>
-      <p class="section__desc fade-in-up">Todas com resultados fora da média de mercado — usando prospecção via tráfego pago, qualificação de lead e venda pelo WhatsApp.</p>
+      <h2 class="fade-in-up">Não é teoria. É <span class="orange">sistema testado</span> em campo.</h2>
       <div class="cards-grid fade-in-up">
         <div class="card">
-          <span class="card__number">R$1M</span>
-          <h3 class="card__title">Uma operação, seis meses</h3>
-          <p class="card__text">Uma empresa de energia solar que começou do zero em março de 2025 e chegou em agosto com R$1 milhão faturado. Margem de lucro padrão de mercado. Quatro meses consecutivos batendo o próprio recorde.</p>
+          <span class="card__number">R$4M+</span>
+          <h3 class="card__title">Gerados em vendas solares</h3>
+          <p class="card__text">Soma de todas as operações que usaram o sistema Rapport — incluindo a nossa própria, que escalou do zero a mais de R$1 milhão em 6 meses.</p>
         </div>
         <div class="card">
           <span class="card__number">8+</span>
           <h3 class="card__title">Empresas solares atendidas</h3>
-          <p class="card__text">Além das nossas duas operações próprias, já atendemos mais de oito empresas de energia solar. Todas trabalhando com o mesmo sistema: tráfego pago, qualificação e venda via WhatsApp. Todas com resultado acima da média do setor.</p>
+          <p class="card__text">Todas trabalhando com o mesmo sistema: tráfego pago, qualificação e venda via WhatsApp. Todas com resultado acima da média do setor.</p>
         </div>
         <div class="card">
-          <span class="card__number">🏆</span>
+          <span class="card__number trophy">&#127942;</span>
           <h3 class="card__title">Premiados pela Sol Fácil</h3>
-          <p class="card__text">Reconhecidos como um dos maiores integradores de vendas na plataforma. Quatro meses batendo recorrente. O mercado validou o que os números já mostravam.</p>
+          <p class="card__text">Reconhecidos como um dos maiores integradores de vendas na plataforma. O mercado validou o que os números já mostravam.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- HISTÓRIA -->
-  <section class="section section--alt" id="historia">
+  <!-- PROVA SOCIAL VÍDEO -->
+  <section class="section section--alt" id="videos">
+    <div class="container">
+      <span class="section__label fade-in-up">Prova social</span>
+      <h2 class="fade-in-up">Quem usou, <span class="orange">recomenda.</span></h2>
+      <div class="videos-grid fade-in-up">
+        <div class="video-card">
+          <div class="video-card__thumb">
+            <div class="video-card__play">&#9654;</div>
+            <span class="video-card__placeholder">Vídeo 1</span>
+          </div>
+          <p class="video-card__name">Depoimento 1</p>
+        </div>
+        <div class="video-card">
+          <div class="video-card__thumb">
+            <div class="video-card__play">&#9654;</div>
+            <span class="video-card__placeholder">Vídeo 2</span>
+          </div>
+          <p class="video-card__name">Depoimento 2</p>
+        </div>
+        <div class="video-card">
+          <div class="video-card__thumb">
+            <div class="video-card__play">&#9654;</div>
+            <span class="video-card__placeholder">Vídeo 3</span>
+          </div>
+          <p class="video-card__name">Depoimento 3</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM SOMOS -->
+  <section class="section" id="historia">
     <div class="container">
       <span class="section__label fade-in-up">Quem somos</span>
       <h2 class="fade-in-up">Não somos agência que faz tráfego pra solar. Somos <span class="orange">operadores que já venderam solar.</span></h2>
-      <div class="story__content fade-in-up">
-        <p>A Rapport foi sócia de uma operação de energia solar que escalou do zero a mais de R$1 milhão em faturamento em 6 meses. Não como prestador de serviço. Como sócio. Com dinheiro próprio na mesa.</p>
-        <p>Construímos o sistema de geração de demanda completo: posicionamento, conteúdo, campanhas, qualificação, CRM e processo comercial. Tudo conectado. Tudo medido por etapa.</p>
-        <div class="callout">
-          <p>Agora estamos rodando uma nova operação — mais enxuta, com precificação melhor e o mesmo sistema aprimorado. Em paralelo, já levamos esse método pra mais de 8 empresas solares que tinham a mesma dor: vendiam por indicação, sem previsibilidade, sem processo.</p>
+      <div class="story fade-in-up">
+        <div class="story__text">
+          <p>A Rapport foi sócia de uma operação de energia solar que escalou do zero a mais de R$1 milhão em faturamento em 6 meses. Não como prestador de serviço. Como sócio. Com dinheiro próprio na mesa.</p>
+          <p>Construímos o sistema de geração de demanda completo: posicionamento, conteúdo, campanhas, qualificação, CRM e processo comercial. Tudo conectado. Tudo medido por etapa.</p>
+          <div class="callout">
+            <p>Agora estamos rodando uma nova operação — mais enxuta, com precificação melhor e o mesmo sistema aprimorado. Em paralelo, já levamos esse método pra mais de 8 empresas solares que tinham a mesma dor: vendiam por indicação, sem previsibilidade, sem processo.</p>
+          </div>
+          <p>Essa consultoria entrega o exato sistema que fez esses resultados acontecerem. Adaptado pra realidade da sua empresa. Montado com você. Pronto pra rodar.</p>
         </div>
-        <p>Essa consultoria entrega o exato sistema que fez esses resultados acontecerem. Adaptado pra realidade da sua empresa. Montado com você. Pronto pra rodar.</p>
+        <div class="story__photo">
+          <div class="story__photo-placeholder">Foto equipe</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRA QUEM É / NÃO É -->
+  <section class="section section--alt" id="pra-quem">
+    <div class="container">
+      <span class="section__label fade-in-up">Pra quem é</span>
+      <h2 class="fade-in-up">Essa consultoria <span class="orange">não é pra todo mundo.</span></h2>
+      <div class="fit-grid fade-in-up">
+        <div class="fit-col fit-col--yes">
+          <h3 class="fit-col__title">Pra quem é</h3>
+          <ul class="fit-list">
+            <li class="fit-list__item fit-list__item--yes"><span class="fit-icon">&#10003;</span> Empresas de energia solar que já vendem projetos</li>
+            <li class="fit-list__item fit-list__item--yes"><span class="fit-icon">&#10003;</span> Quem quer sair da dependência de indicação</li>
+            <li class="fit-list__item fit-list__item--yes"><span class="fit-icon">&#10003;</span> Quem quer previsibilidade na geração de demanda</li>
+            <li class="fit-list__item fit-list__item--yes"><span class="fit-icon">&#10003;</span> Quem tá disposto a investir em tráfego pago</li>
+            <li class="fit-list__item fit-list__item--yes"><span class="fit-icon">&#10003;</span> Quem quer operar sem depender de agência</li>
+          </ul>
+        </div>
+        <div class="fit-col fit-col--no">
+          <h3 class="fit-col__title">Pra quem não é</h3>
+          <ul class="fit-list">
+            <li class="fit-list__item fit-list__item--no"><span class="fit-icon">&#10007;</span> Quem não atua no mercado de energia solar</li>
+            <li class="fit-list__item fit-list__item--no"><span class="fit-icon">&#10007;</span> Quem busca resultado sem investir em mídia</li>
+            <li class="fit-list__item fit-list__item--no"><span class="fit-icon">&#10007;</span> Quem quer terceirizar tudo e não operar</li>
+            <li class="fit-list__item fit-list__item--no"><span class="fit-icon">&#10007;</span> Quem acha que marketing resolve produto ruim</li>
+            <li class="fit-list__item fit-list__item--no"><span class="fit-icon">&#10007;</span> Quem não tem minimamente alguém no comercial</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -148,7 +205,7 @@
         <div class="card card--deliverable">
           <span class="card__index">04</span>
           <h3 class="card__title">Swipe file de criativos</h3>
-          <p class="card__text">Os arquivos e referências que fizeram nossa operação bater mais de R$1M. Você recebe o que já foi testado e funcionou. Sem precisar inventar do zero.</p>
+          <p class="card__text">Os arquivos e referências que fizeram nossa operação bater mais de R$4M. Você recebe o que já foi testado e funcionou.</p>
         </div>
         <div class="card card--deliverable">
           <span class="card__index">05</span>
@@ -158,9 +215,33 @@
         <div class="card card--deliverable">
           <span class="card__index">06</span>
           <h3 class="card__title">Implementação + treinamento</h3>
-          <p class="card__text">A gente planta o funil, implementa junto com você e te ensina a operar. Simples de mexer. Sem depender de agência. Sem mensalidade.</p>
+          <p class="card__text">A gente planta o funil, implementa junto com você e te ensina a operar. Simples de mexer. Sem depender de agência.</p>
+        </div>
+        <div class="card card--deliverable card--ai">
+          <span class="card__index">07</span>
+          <span class="card__badge-ai">Agente IA</span>
+          <h3 class="card__title">Agente de qualificação</h3>
+          <p class="card__text">Agente de IA que conversa com o lead no WhatsApp, qualifica automaticamente e encaminha pro vendedor só quem tem perfil real de compra.</p>
+        </div>
+        <div class="card card--deliverable card--ai">
+          <span class="card__index">08</span>
+          <span class="card__badge-ai">Agente IA</span>
+          <h3 class="card__title">Agente de follow-up</h3>
+          <p class="card__text">Agente de IA que faz follow-up automático com leads que não responderam. Recupera oportunidades que iam morrer no funil.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- GALERIA DE FOTOS -->
+  <section class="gallery-strip">
+    <div class="gallery-strip__track" id="galleryTrack">
+      <div class="gallery-strip__item"><div class="gallery-strip__placeholder">Foto 1</div></div>
+      <div class="gallery-strip__item"><div class="gallery-strip__placeholder">Foto 2</div></div>
+      <div class="gallery-strip__item"><div class="gallery-strip__placeholder">Foto 3</div></div>
+      <div class="gallery-strip__item"><div class="gallery-strip__placeholder">Foto 4</div></div>
+      <div class="gallery-strip__item"><div class="gallery-strip__placeholder">Foto 5</div></div>
+      <div class="gallery-strip__item"><div class="gallery-strip__placeholder">Foto 6</div></div>
     </div>
   </section>
 
@@ -170,23 +251,38 @@
       <span class="section__label fade-in-up">Investimento</span>
       <h2 class="fade-in-up">Uma vez. Sistema rodando. <span class="orange">Sem mensalidade.</span></h2>
       <div class="pricing-card fade-in-up">
-        <div class="pricing-card__price">R$ 2.500</div>
-        <div class="pricing-card__subtitle">Pagamento único</div>
-        <div class="pricing-card__installment">ou 2x de R$1.250 no cartão</div>
+        <div class="pricing-card__price">7x R$&nbsp;500</div>
+        <div class="pricing-card__cash">ou R$&nbsp;3.500 à vista</div>
         <ul class="pricing-card__features">
-          <li><span class="check">✓</span> Diagnóstico completo da operação comercial</li>
-          <li><span class="check">✓</span> Funil de captação e qualificação estruturado</li>
-          <li><span class="check">✓</span> 3 campanhas prontas (marca, captação, retargeting)</li>
-          <li><span class="check">✓</span> Swipe file da operação que gerou +R$1M</li>
-          <li><span class="check">✓</span> Estratégia de conteúdo direcionada</li>
-          <li><span class="check">✓</span> Implementação + treinamento pra operar sozinho</li>
+          <li><span class="check">&#10003;</span> Diagnóstico completo da operação comercial</li>
+          <li><span class="check">&#10003;</span> Funil de captação e qualificação estruturado</li>
+          <li><span class="check">&#10003;</span> 3 campanhas prontas (marca, captação, retargeting)</li>
+          <li><span class="check">&#10003;</span> Swipe file da operação que gerou +R$4M</li>
+          <li><span class="check">&#10003;</span> Estratégia de conteúdo direcionada</li>
+          <li><span class="check">&#10003;</span> Implementação + treinamento pra operar sozinho</li>
+          <li><span class="check">&#10003;</span> Agente IA de qualificação de leads</li>
+          <li><span class="check">&#10003;</span> Agente IA de follow-up automático</li>
         </ul>
         <a href="#formulario" class="btn btn--primary btn--full">
           Quero montar minha máquina de demanda
-          <span class="btn__icon">
-            <svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-          </span>
+          <span class="btn__icon"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTO DESTAQUE -->
+  <section class="section section--alt" id="depoimento">
+    <div class="container">
+      <div class="testimonial fade-in-up">
+        <blockquote class="testimonial__quote">"A Rapport não entregou só um funil. Entregou um sistema completo que a gente opera sozinho. Em 3 meses já tinha se pago mais de 10 vezes."</blockquote>
+        <div class="testimonial__author">
+          <div class="testimonial__avatar"></div>
+          <div>
+            <strong class="testimonial__name">Nome do cliente</strong>
+            <span class="testimonial__role">Empresa Solar — Cidade/UF</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -199,7 +295,6 @@
       <p class="section__desc fade-in-up">Leva menos de 2 minutos. Se sua empresa se encaixar, a gente entra em contato pra agendar.</p>
 
       <div class="form-wrapper fade-in-up" id="formWrapper">
-        <!-- Progress dots -->
         <div class="form-progress" id="formProgress">
           <span class="form-progress__dot active" data-step="1"></span>
           <span class="form-progress__dot" data-step="2"></span>
@@ -317,7 +412,7 @@
           <form id="contactForm" novalidate>
             <div class="form-field">
               <label for="nome">Nome completo *</label>
-              <input type="text" id="nome" name="nome" required placeholder="Digite seu Nome Completo">
+              <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
             </div>
             <div class="form-field">
               <label for="empresa">Nome da empresa</label>
@@ -333,30 +428,26 @@
             </div>
             <button type="submit" class="btn btn--primary btn--full">
               Enviar e garantir minha vaga
-              <span class="btn__icon">
-                <svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-              </span>
+              <span class="btn__icon"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span>
             </button>
           </form>
         </div>
 
-        <!-- Tela de aprovação -->
+        <!-- Aprovação -->
         <div class="form-step form-result" data-step="approved" style="display:none;">
-          <div class="form-result__icon">✓</div>
+          <div class="form-result__icon">&#10003;</div>
           <h3 class="form-result__title">Sua empresa se encaixa.</h3>
           <p class="form-result__text">Em até 24 horas, alguém da Rapport vai entrar em contato pelo WhatsApp pra agendar sua consultoria. Fique de olho.</p>
           <a href="https://wa.me/5584999999999" target="_blank" rel="noopener" class="btn btn--whatsapp btn--full">Quero falar agora pelo WhatsApp</a>
         </div>
 
-        <!-- Tela de rejeição -->
+        <!-- Rejeição -->
         <div class="form-step form-result" data-step="rejected" style="display:none;">
           <h3 class="form-result__title">Essa consultoria é exclusiva pra empresas de energia solar.</h3>
           <p class="form-result__text">Se você atua em outro segmento e quer estruturar processo comercial e geração de demanda, conheça a mentoria da Rapport. É o mesmo método, adaptado pro seu mercado.</p>
           <a href="https://wa.me/5584999999999" target="_blank" rel="noopener" class="btn btn--primary btn--full">
             Quero saber sobre a mentoria
-            <span class="btn__icon">
-              <svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-            </span>
+            <span class="btn__icon"><svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"/></svg></span>
           </a>
         </div>
       </div>
@@ -371,39 +462,35 @@
       <div class="faq-list fade-in-up">
         <details class="faq-item">
           <summary class="faq-item__question">Eu nunca fiz tráfego pago. Funciona pra mim?</summary>
-          <div class="faq-item__answer">
-            <p>Funciona. A consultoria começa do zero. A gente monta o funil, cria as campanhas e te ensina a operar. A nossa operação solar que bateu R$1M também começou sem nunca ter feito tráfego antes.</p>
-          </div>
+          <div class="faq-item__answer"><p>Funciona. A consultoria começa do zero. A gente monta o funil, cria as campanhas e te ensina a operar. A nossa operação solar que bateu R$1M também começou sem nunca ter feito tráfego antes.</p></div>
         </details>
         <details class="faq-item">
           <summary class="faq-item__question">Já tenho uma agência que faz meu tráfego. Serve pra mim?</summary>
-          <div class="faq-item__answer">
-            <p>Serve. Muita empresa solar tem agência mas não tem estratégia. A consultoria estrutura o sistema completo. Você pode usar o que construir com a gente e passar pra sua agência executar.</p>
-          </div>
+          <div class="faq-item__answer"><p>Serve. Muita empresa solar tem agência mas não tem estratégia. A consultoria estrutura o sistema completo. Você pode usar o que construir com a gente e passar pra sua agência executar.</p></div>
         </details>
         <details class="faq-item">
           <summary class="faq-item__question">Preciso de equipe pra operar depois?</summary>
-          <div class="faq-item__answer">
-            <p>Não necessariamente. O sistema foi feito pra ser simples. Se você tem alguém no time que mexe com computador, dá conta. A gente ensina na reunião de treinamento.</p>
-          </div>
+          <div class="faq-item__answer"><p>Não necessariamente. O sistema foi feito pra ser simples. Se você tem alguém no time que mexe com computador, dá conta. E os agentes de IA cuidam da qualificação e follow-up automaticamente.</p></div>
         </details>
         <details class="faq-item">
           <summary class="faq-item__question">Quanto tempo leva pra ver resultado?</summary>
-          <div class="faq-item__answer">
-            <p>Depende do investimento em mídia e da região. Mas a maioria começa a gerar leads na primeira semana de campanha ativa. Resultado em vendas depende do ciclo do negócio — energia solar costuma ter ciclo de 10 a 30 dias.</p>
-          </div>
+          <div class="faq-item__answer"><p>Depende do investimento em mídia e da região. Mas a maioria começa a gerar leads na primeira semana de campanha ativa. Resultado em vendas depende do ciclo do negócio — energia solar costuma ter ciclo de 10 a 30 dias.</p></div>
         </details>
         <details class="faq-item">
           <summary class="faq-item__question">Tem mensalidade ou é só o pagamento único?</summary>
-          <div class="faq-item__answer">
-            <p>Pagamento único. R$2.500 — à vista ou 2x no cartão. Sem mensalidade, sem taxa recorrente, sem pegadinha. Paga uma vez e opera sozinho.</p>
-          </div>
+          <div class="faq-item__answer"><p>Pagamento único. 7x de R$500 ou R$3.500 à vista. Sem mensalidade, sem taxa recorrente, sem pegadinha. Paga uma vez e opera sozinho.</p></div>
         </details>
         <details class="faq-item">
           <summary class="faq-item__question">Vocês vendem energia solar ou são agência?</summary>
-          <div class="faq-item__answer">
-            <p>Os dois. A Rapport é uma assessoria de marketing e performance com 10 anos de mercado. E somos sócios de operações de energia solar. Essa consultoria nasce da combinação: método de marketing + vivência real no setor. Não é teoria de quem nunca vendeu um projeto solar.</p>
-          </div>
+          <div class="faq-item__answer"><p>Os dois. A Rapport é uma assessoria de marketing e performance com 10 anos de mercado. E somos sócios de operações de energia solar. Essa consultoria nasce da combinação: método de marketing + vivência real no setor.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__question">Como funcionam os agentes de IA?</summary>
+          <div class="faq-item__answer"><p>São agentes configurados pra rodar no WhatsApp. O agente de qualificação conversa com o lead, faz perguntas-chave e só encaminha pro vendedor quem tem perfil real. O de follow-up reativa leads que pararam de responder. Tudo automático.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-item__question">Quantas vagas tem por mês?</summary>
+          <div class="faq-item__answer"><p>Limitamos a 5 vagas por mês pra garantir que cada empresa recebe atenção total na implementação. Quando as vagas acabam, só no mês seguinte.</p></div>
         </details>
       </div>
     </div>
@@ -411,26 +498,11 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <p>Rapport &copy; 2026 &middot; @rapport &middot; Natal/RN</p>
+    <div class="container footer__inner">
+      <a href="#" class="footer__logo">RAPP<span class="orange">O</span>RT</a>
+      <p class="footer__copy">Rapport &copy; 2026 &middot; @rapport &middot; Natal/RN</p>
     </div>
   </footer>
-
-  <!-- STICKY CTA (floating bottom-right) -->
-  <div class="sticky-cta sticky-cta--hidden" id="stickyCta">
-    <a href="#formulario" class="btn btn--primary">
-      Quero minha máquina de demanda
-      <span class="btn__icon">
-        <svg viewBox="0 0 12 12"><path d="M2 6h8M7 3l3 3-3 3"/></svg>
-      </span>
-    </a>
-    <div class="progress-wrapper">
-      <div class="progress-bar">
-        <div class="progress-bar__fill"></div>
-      </div>
-      <p class="progress-label">Vagas limitadas — consultoria exclusiva</p>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 </body>
